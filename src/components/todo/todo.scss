@@ -1,0 +1,125 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding:0;
+    width: 100%;
+}
+.todo-details {
+    display:flex;
+    flex-direction:column;
+
+    header {
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        padding:.5em 1em;
+    }
+
+    .item {
+        flex:1;
+        padding: 1em;
+    }
+  
+ 
+}
+
+main {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2.toDoHeader {
+    background-color: #4b4c48;
+    color: white;
+    padding: 18px;
+    display: flex;
+    justify-content: left;
+
+}
+header.mainHeader {
+    width: 100%;
+    background-color: #ddddea;
+    color: white;
+}
+header {
+    width: 80%;
+    margin-top: 12px;
+    padding: 12px;
+}
+
+.todo {
+
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-start;
+    margin: 2em;
+
+    form {
+
+        display:flex;
+        flex-direction:column;
+        margin-right: 2em;
+
+        label {
+            display: flex;
+            flex-direction:column;
+            margin-bottom: 1em;
+        }
+    }
+
+    ul {
+        list-style-type:none;
+        margin:0;
+        padding:0;
+
+       
+        li {
+
+            align-items: center;
+            display:flex;
+            flex-direction:row;
+            font-size: .75em;
+            margin: .75em .5em;
+            padding: 2%;
+            text-align: left;
+
+            &.complete-true {
+              span {
+                background: rgb(159, 223, 143);
+                &:hover {
+                   background: seagreen;
+                }
+              }
+            }
+
+            span {
+                background: #f36e6e;
+                cursor:pointer;
+               
+                &:hover {
+                    background: pink;
+                }
+            }
+             span, input {
+              
+                 border: .5px solid #eee;
+                 display:inline-block;
+                 padding: .5em 1.25em;
+                 width: 300px;
+             }
+
+            button {
+                background: transparent;
+                border:none;
+                color:blue;
+                cursor:pointer;
+                padding:0;
+                margin: 0 .75em;
+            }
+
+        }
+    }
+
+}
