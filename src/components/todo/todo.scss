@@ -1,0 +1,155 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.todo-details {
+    display: flex;
+    flex-direction: column;
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.5em 1em;
+    }
+
+    .item {
+        flex: 1;
+        padding: 1em;
+    }
+}
+
+main {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2.toDoHeader {
+    background-color: #4b4c48;
+    color: white;
+    padding: 18px;
+    display: flex;
+    justify-content: left;
+}
+.card {
+    box-shadow: 0px 1px 2px 0px grey;;
+    &:hover{
+        box-shadow: 0px 1px 2px 0px #f36e6e;
+    }
+}
+header.mainHeader {
+    width: 100%;
+    background-color: #ddddea;
+    color: white;
+}
+header {
+    width: 80%;
+    margin-top: 12px;
+    padding: 12px;
+}
+
+.diff {
+    position: absolute;
+    right: 0;
+    margin: -2% 3% 1% 1%;
+}
+
+.name.card-title.h5 {
+    margin: -1% 1% 1% 8%;
+    
+}
+.topname {
+
+    display: flex;
+    border-bottom: solid 1px #afabab;
+}
+.contentInformation {
+    
+    font-weight: bold;
+    margin: 3% 0% 0% 3%;
+}
+.todo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 2em;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        margin-right: 2em;
+
+        label {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1em;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            font-size: 0.75em;
+            margin: 0.75em 0.5em;
+            padding: 2%;
+            text-align: left;
+
+            &.complete-true {
+                h3 {
+                    background: rgb(159, 223, 143);
+                    width: 23%;
+                    border-radius: 10px;
+                    height: 20px;
+                    font-size: 9px;
+                    font-weight: bold;
+                }
+            }
+
+            h3{
+                background: #f36e6e;
+                cursor: pointer;
+                width: 23%;
+                border-radius: 10px;
+                height: 20px;
+                font-size: 9px;
+                font-weight: bold;
+            }
+            h3,
+            input {
+                //  border: .5px solid #eee;
+                display: inline-block;
+                padding: 0.5em 1.25em;
+               
+            }
+
+            button {
+                background: transparent;
+                border: none;
+                color: #565656;
+                cursor: pointer;
+                padding: 0;
+                margin: -7% 1% -2% 35%;
+                font-size: 21px;
+                font-weight: bold;
+                &:focus{
+                    border: none;
+                    outline: 0 
+                }
+                &:hover{
+                    color: #f36e6e;
+                }
+            }
+        }
+    }
+}
