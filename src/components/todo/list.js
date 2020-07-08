@@ -1,11 +1,21 @@
-import React from 'react';
-import { Card, Button } from 'react-bootstrap';
+import React, { useState , useContext} from 'react';
+import { Card} from 'react-bootstrap';
+import { SettingsContext } from '../../context/site.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 function TodoList(props) {
+  const siteContext = useContext(SettingsContext);
+
+  const [btnIndex, setbtnIndex] = useState(0);
+
+
+  //  setButton(siteContext.pageNum);
+
 
   return (
     <ul>
-      {props.list.map(item => (
+      {props.list.slice(btnIndex * siteContext.pageNum, btnIndex * siteContext.pageNum + siteContext.pageNum)
+      .map(item => (
         <li
           className={`complete-${item.complete.toString()}`}
           key={item._id}
