@@ -4,7 +4,7 @@ export const SettingsContext = React.createContext();
 
 function SettingsProvider(props) {
 
-  const [pageNum, setPageNum] = useState(2);
+  const [pageNum, setPageNum] = useState(3);
   const [sort, setSort] = useState('DailyDoseOfCode');
   
   // packaging all of state and state methods in one obj

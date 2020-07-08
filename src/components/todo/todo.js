@@ -1,14 +1,14 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import TodoForm from './form.js';
 import TodoList from './list.js';
 import useAjax from '../hooks/ajax';
-import { SettingsContext } from '../../context/site.js';
+// import { SettingsContext } from '../../context/site.js';
 
 import '../todo/todo.scss';
 
 
 function ToDo(props) {
- const siteContext = useContext(SettingsContext);
+//  const siteContext = useContext(SettingsContext);
 
 
   const [list, setList] = useState([]);
